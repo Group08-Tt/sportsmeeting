@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>首页</title>
+		<meta name="keywords" content="">
+		<meta name="description"
+			content="个人学习">
+		<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+		<meta name="baidu-site-verification" content="code-cl37WdRgLc" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+		<link rel="stylesheet" href="./css/ks.css" />
+		<script src="./js/jq.js"></script>
+		
+<!--
+<script src="https://www.kuangstudy.com/assert/js/clipboard.min.js?v=1.989"></script>
+<script src="https://www.kuangstudy.com/assert/js/common.js?v=1.989"></script>
+		<script src="https://www.kuangstudy.com/assert/js/debug/debug.js?v=1.989"></script>
+		<script src="https://www.kuangstudy.com/assert/js/commonmain.js?v=1.989"></script>
+		<script src="https://www.kuangstudy.com/assert/js/jqueryy.js?v=1.989"></script>
+		<script src="https://www.kuangstudy.com/assert/js/wxLogin.js?v=1.989"></script>
+-->
+
+		<style>
+			.navbar {
+				background: transparent !important;
+				box-shadow: none !important;
+				position: fixed;
+				right: 0;
+				left: 0;
+				top: 0;
+				z-index: 30;
+			}
+
+			.navbar-light .navbar-brand,
+			.navbar-light .navbar-brand:focus,
+			.navbar-light .navbar-brand:hover,
+			.navbar-light .navbar-nav .nav-link {
+				color: #FFFFFF !important;
+			}
+
+			.banner-swiper-box {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+			}
+
+			#container {
+				position: fixed;
+				width: 100vmax;
+				height: 100vmax;
+				left: 50%;
+				top: 50%;
+				background: linear-gradient(0deg, #1E9FFF, #1E9FFF 51%, #04161e);
+				transform: translate3d(-50%, -40%, 0);
+			}
+
+			.button-primary {
+				border-color: transparent;
+				color: #34cda9;
+			}
+
+			.nav-content svg {
+				padding-right: 4px;
+				position: relative;
+				top: -2px;
+				font-size: 20px;
+			}
+
+			.button-area i {
+				padding-right: 6px;
+			}
+
+			.ksd-user-info {
+				color: #fff !important;
+			}
+
+			.ksd-user-info:hover {
+				color: #eee;
+				text-decoration: none;
+			}
+
+			.ksdbtn1:hover {
+				background: #111;
+				color: #fff;
+			}
+
+			.ksdbtn1 {
+				background: #28c58d;
+				color: #fff;
+				box-shadow: 0 0 45px #35a8f0
+			}
+
+			.ksdbtn2 {
+				background: #4d2b8a;
+				color: #fff;
+				box-shadow: 0 0 45px #35a8f0
+			}
+
+			.ksdbtn3 {
+				background: #2414b1;
+				color: #fff;
+				box-shadow: 0 0 45px #35a8f0
+			}
+
+			.ksdbtn4 {
+				background: #b1149e;
+				color: #fff;
+				box-shadow: 0 0 45px #35a8f0
+			}
+
+			body {
+				background: #2196F3;
+			}
+
+			#surfaceCanvas {
+				position: fixed;
+				background: #2196F3;
+			}
+
+			.home-page .top-section .vertical-middle {
+				background: transparent !important;
+				box-shadow: none;
+			}
+
+			.ksd-logindrop {
+				z-index: 100;
+				position: absolute;
+				width: 248px;
+				background: transparent;
+				margin: 10px;
+				font-family: "微软雅黑";
+				font-size: 14px;
+				color: #999999;
+				top: -14px;
+				right: -22px;
+			}
+
+			.ksd-home,
+			.ksd-header-items .ksd-num-items a,
+			.ksd-sign-items a,
+			.ksd-header-items .ksd-num-items .num,
+			.ksd-header-items .ksd-num-items .text,
+			.ksd-logindrop .ksd-login-items .items a {
+				color: #fff !important;
+			}
+
+			.ksd-header-items .ksd-num-items:hover {
+				background: rgba(255, 255, 255, 0.06) !important;
+			}
+
+			.ksd-logindrop .ksd-login-items .items:hover {
+				background: #1E9FFF;
+			}
+
+			.blog-footer {
+				padding: 2.5rem 1rem;
+				font-size: 12px;
+				color: #fff;
+				text-align: center;
+				position: fixed;
+				bottom: 0;
+				z-index: 111;
+				border-top: 0;
+				right: 0;
+				left: 0;
+				background: transparent;
+			}
+
+			.blog-footer a {
+				color: #fff;
+			}
+
+			.dropdown-toggle.cofff,
+			.tipmessage-box.cofff {
+				color: #fff
+			}
+
+			.tipmessage-box {
+				top: 6px;
+				color: #fff;
+				width: 50px;
+			}
+
+			.ksdbtn1 {
+				height: 42px;
+				line-height: 42px;
+			}
+
+			.nav-link.ksd-nav-linknav:hover {
+				background-color: #fff !important;
+				color: #666 !important;
+				box-shadow: 2px 2px 1px #c5c0cc inset;
+			}
+
+			.nav-link.ksd-nav-linknav:hover {
+				background-color: #2196F3 !important;
+				color: #fff !important;
+				box-shadow: 2px 2px 1px #258ada inset
+			}
+
+			.iconhuiover {
+				position: absolute;
+				right: 4px;
+				bottom: 3px;
+				background: #fff;
+				width: 10px;
+				height: 8px;
+				z-index: -1;
+				border-radius: 50%;
+			}
+
+			body {
+				background-size: cover !important;
+			}
+
+			.ftp2 {
+				top: 0px !important;
+			}
+
+			.tipmessage-box {
+				visibility: hidden;
+				display: none
+			}
+
+			.ktipmessage-box {
+				color: #fff !important;
+				top: 15px !important;
+				display: none;
+				visibility: hidden
+			}
+
+			.ktipmessage-box:hover {
+				color: #eee;
+			}
+
+			.ktipmessage-boxc {
+				color: #fff;
+				top: 3px;
+				display: none;
+				visibility: hidden
+			}
+
+			/* 定义keyframe动画，命名为blink */
+		</style>
+	</head>
+	<body class="home-page">
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light">
+			<div class="container">
+				<a class="navbar-brand logo" href="/">
+					<img style="width: 112px;" src="/assert/images/index_topleft_logo.png" alt="">
+				</a>
+				<div class="collapse navbar-collapse position-relative">
+					<ul class="navbar-nav mr-auto">
+						<li class="nav-item position-relative">
+							<a class="nav-link ksd-nav-linknav nav-link-course" href="/course">信息</a>
+							<i class="iconfont  ksd-bgd-left">免费</i>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ksd-nav-linknav nav-link-topics" href="/payvip">江湖</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link ksd-nav-linknav nav-link-down" href="/app">导航</a>
+						</li>
+					</ul>
+					<div id="ksdloginbox">
+						<div style="position: relative;top:-2px;">
+							<div>
+								<a class="btn btn-sm btn-primary loginbtn" href="/admin">
+									<svg style="position: relative;top:1px;" class="bi bi-person-fill" width="1em"
+										height="1em" viewBox="0 0 16 16" fill="currentColor"
+										xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd"
+											d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z">
+										</path>
+									</svg>
+									登录
+								</a>
+							</div>
+
+
+
+
+
+							<script>
+								$("#navbarDropdown").on("click", function(e) {
+									var that = this;
+									var vip = $(that).data("vip");
+									$(".i-frame").hide();
+									$(".tipmessage-box,.dropdown-toggle").addClass("cofff");
+									$(".ksd-home,.tipmessage-box,.ktipmessage-boxc").toggle();
+									$(that).parent().toggleClass('show');
+									// 等级初始化
+									KsdRelation.level();
+									KsdSign.loadUserRecordQiandao();
+									KsdLogin.sysncount(function() {});
+
+									var lipboard = new ClipboardJS('.ksdcopylinknum');
+									lipboard.on('success', function(e) {
+										layer.msg("复制成功！")
+										e.clearSelection();
+									});
+								})
+
+								$(".ksd-logindrop").on("mouseleave", function() {
+									$(".ksd-home").hide();
+									$(".tipmessage-box,.ktipmessage-boxc").show();
+									KsdLogin.count = 2;
+									$(".tipmessage-box,.dropdown-toggle").removeClass("cofff");
+									$(this).addClass('show').removeClass("showvip2 showvip1");
+								})
+							</script>
+						</div>
+					</div>
+				</div>
+			</div>
+			<script>
+				var link = window.location.href;
+				$(".nav-link").removeClass("active");
+				if (link.indexOf('bbs') != -1) {
+					$(".nav-link-topics").addClass("active");
+				}
+				if (link.indexOf('course') != -1) {
+					$(".nav-link-course").addClass("active");
+				}
+				if (link.indexOf('app') != -1) {
+					$(".nav-link-down").addClass("active");
+				}
+			</script>
+		</nav>
+		<div class="space-theme-trigger icon" style="background-position: 0px 0px;"></div>
+		<section class="top-section">
+			<div class="vertical-middle">
+				<div class="product-name"><img style="width: 280px;" src="/assert/images/indexlogo.png" alt=""></div>
+				<p class="product-desc">为每个人都能拥有自己的网页信息的平台</p>
+				<p class="product-desc ksd-product-desctext fz16"></p>
+				<div class="button-area">
+					<a class="button button-primary fw ksdbtn1" target="_blank" href="/course"><i
+							class="layui-icon layui-icon-note"></i>信息</a>
+					<a class="button button-primary fw ksdbtn1 ksdbtn2" target="_blank" href="/payvip"><i
+							class="iconfont iconwenzhang"></i>江湖</a>
+					<a class="button button-primary fw ksdbtn1 ksdbtn4" target="_blank"
+						href="/bbs/1324194891442282498"><i class="layui-icon layui-icon-tree"></i>关于我们</a>
+				</div>
+		</section>
+		<style>
+			.layui-fixbar {
+				display: none
+			}
+		</style>
+		<footer class="blog-footer">
+			<p>
+				<a href="/bbs/1324194891442282498">关于我们</a>
+				<span>|</span>
+				<a href="/bbs/1324205709382770689">加入我们</a>
+				<span>|</span>
+				<a href="/bbs/1324199621287600130">联系我们</a>
+				<span>|</span>
+				<a href="javascript:void(0);" id="ksd-help" onclick="help()">帮助中心</a>
+			</p>
+			<p><span> </span><a href="http://beian.miit.gov.cn/" target="_blank">黔ICP备  2021004490号  </a></p>
+		</footer>
+		<ul class="layui-fixbar">
+			<li class="layui-icon layui-fixbar-top" lay-type="top" style="display: list-item;"></li>
+		</ul>
+		<div id="UDBSdkLgn">
+			<div id="UDBSdkLgn-mask"></div>
+			<div id="UDBSdkLgn-box" class="animated2 bounceInDown" style="height: 480px;">
+				<div class="udb-wrap">
+					<a href="javascript:void(0);" class="loginclose" title="关闭" id="close-udbLogin"><i
+							class="iconfont iconremove1"></i></a>
+					<div class="input-login-wrap login-digla login-wrap" style="" id="input-login-wrap">
+						<div class="login-content" style="padding-top:20px;">
+							<div class="wx-qr-content ksd-weixin-content" style="display: block;">
+								<div class="wx-qr-code">
+									<div class="wx-qr-code-img" style="margin:40px 0 10px;">
+										<div class="img" id="wx-qr-code-imgbox"></div>
+										<div class="loadtipweixin"
+											style="position:relative;height:26px;line-height: 26px;">
+											<span
+												style="font-size: 18px;font-weight: bold;color:#1E9FFF;">正在登录，请稍后...</span>
+										</div>
+										<div class="pt-2 green"><a
+												href="https://www.kuangstudy.com/bbs/1390167201981509633" class="fz12"
+												style="color: #ff1d00" target="_blank">登录不上，点击此处！</a></div>
+									</div>
+									<div class="form-bottom" style="margin-top:15px;">
+										<p class="weixin-text">
+											<a class="weixin-login ksd-login" data-index="1"
+												href="javascript:void(0);">账号登录</a>
+										</p>
+									</div>
+									<div class="form-bottom" style="margin:5px 0 0 ">
+										<p class="weixin-text fz12" style="color: gray;">登录即代表你同意<a
+												href="https://www.kuangstudy.com/bbs/1324277936014766081"
+												target="_blank"
+												style="padding:0 2px;color: #111;text-decoration: underline;font-size:12px;">用户协议</a>和<a
+												target="_blank"
+												href="https://www.kuangstudy.com/bbs/1324272431531831298"
+												style="font-size:12px;padding:0 2px;color: #111;text-decoration: underline;">隐私政策</a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="phone-content ksd-weixin-content" style="display: none">
+								<div class="login-title">账号登录</div>
+								<div class="form-login">
+									<div class="usernameBox">
+										<input type="text" class="cyinput1 form-control ksd-account-phone"
+											autofocus="autofocus" maxlength="20" placeholder="请输入手机号 或 用户数字编号 登录">
+									</div>
+									<div class="usernameBox">
+										<input type="password" class="cyinput1 form-control ksd-account-pwd"
+											maxlength="18" placeholder="请输入6-18位密码">
+									</div>
+									<button class="cymyloginbutton goLogin account-login">登录</button>
+									<div class="form-bottom" style="margin:20px 0">
+										<p class="weixin-text">
+											<a class="weixin-login ksd-login" data-index="0"
+												href="javascript:void(0);">微信扫描注册/登录</a>
+										</p>
+									</div>
+									<div class="form-bottom" style="margin:20px 0">
+										<p class="weixin-text fz12" style="color: gray">登录即代表你同意<a target="_blank"
+												href="https://www.kuangstudy.com/bbs/1324277936014766081"
+												style="padding:0 2px;color: #111;text-decoration: underline;font-size:12px;">用户协议</a>和<a
+												href="https://www.kuangstudy.com/bbs/1324272431531831298"
+												target="_blank"
+												style="font-size:12px;padding:0 2px;color: #111;text-decoration: underline;">隐私政策</a>
+										</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="./js/pop.js"></script>
+		<script src="./js/serr.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="https://www.kuangstudy.com/assert/js/lan/yuju.js?v=1.989"></script>
+		<script>
+			$(function() {
+				loadBgIndexPic(66)
+			});
+		</script>
+	</body>
+</html>
