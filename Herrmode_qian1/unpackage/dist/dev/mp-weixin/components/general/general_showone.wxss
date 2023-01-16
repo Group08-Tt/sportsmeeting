@@ -1,0 +1,26 @@
+
+.tuandui_herder{
+	display: flex;justify-content: space-between;
+}
+.tuandui_mdoehu {
+		width: 84%;
+		margin-left: 3%;
+		height: 60rpx;
+		display: flex;
+		margin-top: 20rpx;
+}
+.tuandui_biao {
+		width: 4rpx;
+		height: 40rpx;
+		margin-top: 2rpx;
+		background-color: #4a89eb;
+		border-radius: 20rpx;
+		box-shadow: 1rpx 1rpx 20rpx 1rpx #4a89eb;
+}
+.tuandui_zi {
+		color: #393939;
+		margin-top: 4rpx;
+		margin-left: 20rpx;
+		font-size: 28rpx;
+}
+

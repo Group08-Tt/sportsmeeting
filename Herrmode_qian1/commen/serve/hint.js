@@ -1,0 +1,4 @@
+
+const hintjiandna = function(){
+	
+}
