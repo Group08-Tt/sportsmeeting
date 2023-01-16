@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "uview-ui": "^2.0.29",
+    "vite-plugin-style-import": "^1.4.1"
+  },
+  "devDependencies": {
+    "vite-plugin-style-import": "^1.4.1"
+  }
+}

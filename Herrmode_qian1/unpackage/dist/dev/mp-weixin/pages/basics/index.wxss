@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* uni.scss */
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.content.data-v-5e9bf941 {
+  height: calc(90vh);
+  background-color: #FFFFFF;
+}
+.cs_herder.data-v-5e9bf941 {
+  width: 94%;
+  height: auto;
+  margin-left: 3%;
+}
+.cs_herder .cs_body.data-v-5e9bf941 {
+  width: 100%;
+  padding-left: 3%;
+  padding-top: 20rpx;
+  height: 200rpx;
+  margin-top: 20rpx;
+  box-shadow: 1rpx 1rpx 20rpx 5rpx #bcbcbc;
+  border-radius: 20rpx;
+  display: flex;
+}
+.cs_herder .cs_body .cs_left.data-v-5e9bf941 {
+  width: 70%;
+  height: 200rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: -16rpx;
+}
+.cs_herder .cs_body .cs_left .cs_nei.data-v-5e9bf941 {
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.cs_herder .cs_body .cs_right.data-v-5e9bf941 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 18rpx;
+}
+.cs_herder .cs_body .cs_right image.data-v-5e9bf941 {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 18rpx;
+}
+

@@ -1,0 +1,1 @@
+<view><view class="tuandui_herder"><view class="tuandui_mdoehu"><view class="tuandui_biao"></view><view class="tuandui_zi">{{information}}</view></view><slot name="header"></slot></view></view>

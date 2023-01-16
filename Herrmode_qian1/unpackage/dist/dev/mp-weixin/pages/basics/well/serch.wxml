@@ -1,0 +1,1 @@
+<view><cu-custom vue-id="5c6b0141-1" bgColor="bg-gradual-pink" isBack="{{true}}" bind:__l="__l" vue-slots="{{['backText','content']}}"><view slot="backText">返回</view><view slot="content">{{datalist.title}}</view></cu-custom><view class="hearde_min"><view class="title_min">{{datalist.body}}</view><image src="{{datalist.imagesrc}}"></image></view></view>
