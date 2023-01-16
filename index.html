@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Index</title>
+    <style type="text/css">
+    </style>
+</head>
+
+<body>
+<div>
+    <input type="file" name="photo" id="photo" value="" placeholder="免冠照片">
+    <input type="button" onclick="postData();" value="下一步" name="" style="width:100px;height:30px;">
+</div>
+　<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script type="text/javascript">
+    function postData() {
+        var formData = new FormData();
+        formData.append("photo", $("#photo")[0].files[0]);
+        formData.append("service", 'App.Passion.UploadFile');
+        console.log(132,formData)
+        $.ajax({
+            url: '#', /*接口域名地址*/
+            type: 'post',
+            data: formData,
+            contentType: false,
+            processData: false,
+            success: function (res) {
+                console.log(res.data);
+                if (res.data["code"] == "succ") {
+                    alert('成功');
+                } else if (res.data["code"] == "err") {
+                    alert('失败');
+                } else {
+                    console.log(res);
+                }
+            }
+        })
+    }
+</script>
+
+
+</body>
+
+</html>
