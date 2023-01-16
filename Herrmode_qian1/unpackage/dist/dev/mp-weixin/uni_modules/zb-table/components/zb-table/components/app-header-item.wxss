@@ -1,0 +1,75 @@
+@charset "UTF-8";
+/* uni.scss */
+/* 页面左右间距 */
+/* 文字尺寸 */
+/*文字颜色*/
+/* 边框颜色 */
+/* 图片加载中颜色 */
+/* 行为相关颜色 */
+.zb-stick-side {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+.zb__item-inner {
+  display: flex;
+  flex-direction: column;
+}
+.zb__item-inner .item-th {
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  background: #fafafa;
+}
+.zb__item-inner .item-th .item-content {
+  height: 40px;
+  padding-left: 8px;
+  padding-right: 20px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+.zb__item-inner .sorter-table {
+  position: absolute;
+  right: 6px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.zb__item-inner .sorter-table .sorter-table-icon {
+  width: 0;
+  height: 0;
+  color: #dcdcdc;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.zb__item-inner .sorter-table .sorter-table-icon:first-child {
+  border-bottom: 5px solid currentColor;
+}
+.zb__item-inner .sorter-table .sorter-table-icon:last-child {
+  margin-top: 1.5px;
+  border-top: 5px solid currentColor;
+}
+.zb__item-inner .sorter-table .sorting_desc {
+  color: #2979ff;
+}
+.zb__item-inner .sorter-table .sorting_asc {
+  color: #2979ff;
+}
+.zb__item-inner .checkbox-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+.zb__item-inner .item-children {
+  display: flex;
+}
+

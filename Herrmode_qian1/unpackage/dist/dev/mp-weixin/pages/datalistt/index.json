@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "zb-table": "/uni_modules/zb-table/components/zb-table/zb-table"
+  },
+  "component": true
+}

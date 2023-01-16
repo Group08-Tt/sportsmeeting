@@ -1,0 +1,1 @@
+<view class="content data-v-8528d622"><cu-custom vue-id="1ff0ec12-1" bgColor="bg-gradual-pink" isBack="{{false}}" class="data-v-8528d622" bind:__l="__l" vue-slots="{{['backText','content']}}"><view slot="backText" class="data-v-8528d622">返回</view><view slot="content" class="data-v-8528d622">视频</view></cu-custom></view>

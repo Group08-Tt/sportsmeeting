@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "table-header-item": "/uni_modules/zb-table/components/zb-table/components/table-header-item",
+    "table-checkbox": "/uni_modules/zb-table/components/zb-table/components/table-checkbox"
+  }
+}

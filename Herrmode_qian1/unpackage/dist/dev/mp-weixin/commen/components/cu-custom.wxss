@@ -1,0 +1,48 @@
+
+.bg-gradual-pink {
+		/* background-image: linear-gradient(45deg, #4dbaec, #3fb68a); */
+		/* background-color: #4078a8; */
+		background-image: linear-gradient(45deg, #4682B4, #4682B4    );
+		color: #ffffff;
+}
+.cu-custom {
+		display: block;
+		position: relative;
+}
+.cu-bar {
+		display: flex;
+		position: relative;
+		align-items: center;
+		min-height: 100rpx;
+		justify-content: space-between;
+}
+.cu-bar.fixed,
+	.nav.fixed {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		z-index: 1024;
+		box-shadow: 0 1rpx 6rpx rgba(0, 0, 0, 0.1);
+}
+.cuIcon-back:before {
+	content: "\e679";
+}
+.cu-bar .content {
+		position: absolute;
+		text-align: center;
+		width: calc(100% - 340rpx);
+		left: 0;
+		right: 0;
+		bottom: 0;
+		top: 0;
+		margin: auto;
+		height: 60rpx;
+		font-size: 32rpx;
+		line-height: 60rpx;
+		cursor: none;
+		pointer-events: none;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+}
+

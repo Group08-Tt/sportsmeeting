@@ -1,0 +1,1 @@
+<view><cu-custom vue-id="010dee17-1" bgColor="bg-gradual-pink" isBack="{{true}}" bind:__l="__l" vue-slots="{{['backText','content']}}"><view slot="backText">返回</view><view slot="content">用户协议</view></cu-custom><view><rich-text nodes="{{html_user_agreement}}"></rich-text></view></view>
