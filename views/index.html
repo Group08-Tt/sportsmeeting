@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>标题</title>
+</head>
+<body>
+    <div >123456456</div>
+    <input type="text" value="" name="zhanghu" >  <br>
+    <input type="text" value="" name="password">  <br>
+
+    <button id="butt">测试123</button>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script type="text/javascript">
+    $("#butt").on("click", function(){
+        console.log($("input").eq(0).val())
+    });
+
+    // $(document).on("click","#butt",function(){
+    //     console.log(12111111)
+    // })
+
+    // $("#butt").on('click',function(){
+    //     alert($(this).html());
+    // });
+
+    // $("button").click(function (e) {
+    //     console.log("1123456")
+    // })
+
+    // $(document).on("click","#ce",function(e){
+    //     console.log(12111111)
+    // })
+
+</script>
+</html>
